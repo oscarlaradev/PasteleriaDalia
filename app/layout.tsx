@@ -35,7 +35,12 @@ export default function RootLayout({
   const schemaJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Bakery',
-    name: 'Dalia Repostería',
+    name: 'Pastelería Dalia',
+    alternateName: ['Dalia Repostería', 'Dalia Cakes & Postres'],
+    url: 'https://daliareposteria.mx',
+    sameAs: [
+      'https://www.facebook.com/daliapasteleriatampico',
+    ],
     image: 'https://daliareposteria.mx/assets/images/hero_cake.jpg',
     address: {
       '@type': 'PostalAddress',

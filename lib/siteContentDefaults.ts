@@ -40,7 +40,7 @@ export const DEFAULT_SITE_CONTENT: SiteContent = {
     whatsapp: '528333186010',
     hours: 'Lunes a Sábado: 9:00 AM - 7:30 PM | Domingos: 10:00 AM - 3:00 PM',
     instagram: 'https://instagram.com',
-    facebook: 'https://facebook.com',
+    facebook: 'https://www.facebook.com/daliapasteleriatampico',
   },
   announcement: {
     enabled: false,
