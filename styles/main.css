@@ -1,0 +1,1244 @@
+/* ==========================================================================
+   DULCE AURA • ALTA REPOSTERÍA CASERA DE AUTOR
+   Directiva Maestra Creativa: Deseo Culinario, WCAG 2.2 AA & Cero Fricción
+   ========================================================================== */
+
+/* --- 1. TOKENS DE DISEÑO CULINARIO & VARIABLES --- */
+:root {
+  /* Paleta Culinaria de Alto Apetito & Contraste WCAG 2.2 AA */
+  --cacao-deep: #161012;         /* Fondo nocturno / texto principal (contraste 14.2:1) */
+  --cacao-surface: #22181B;      /* Superficie oscura para tarjetas de autor */
+  --mantequilla-base: #FAF6F0;   /* Fondo general cálido tipo harina / mantequilla cruda */
+  --crema-batida: #FFFFFF;       /* Fondo de tarjetas y elementos activos */
+  --frambuesa-viva: #B82A4A;     /* Acento principal de apetito (contraste >= 4.6:1 en blanco y crema) */
+  --frambuesa-hover: #981E3A;
+  --frambuesa-soft: #FDE8ED;
+  --salvia-botanica: #2D3D32;    /* Tono terroso para hierbas y flores orgánicas */
+  --oro-miel: #C5902B;           /* Toques de corteza horneada y vainilla */
+  --text-primary: #161012;
+  --text-secondary: #56474A;     /* Contraste 5.2:1 verificado para lectura extendida */
+  --text-muted: #726266;
+  --border-light: rgba(22, 16, 18, 0.12);
+  --border-focus: #B82A4A;
+
+  /* Tipografía */
+  --font-title: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Espaciados y Radios */
+  --container-max: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transiciones Suaves */
+  --ease-culinary: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s var(--ease-culinary);
+}
+
+/* --- 2. RESET Y ACCESIBILIDAD BASE (WCAG 2.2 AA) --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--mantequilla-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Indicador de Foco Visible Universal (Requisito Crítico WCAG 2.2) */
+:focus-visible {
+  outline: 3px solid var(--border-focus) !important;
+  outline-offset: 3px !important;
+}
+
+/* Enlace de Salto para Usuarios de Teclado */
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 20px;
+  background: var(--frambuesa-viva);
+  color: #FFF;
+  padding: 14px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  z-index: 10000;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: top 0.2s var(--ease-culinary);
+}
+
+.skip-link:focus {
+  top: 20px;
+}
+
+/* Clase Utilitaria para Contenido Exclusivo de Lectores de Pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respeto a Preferencias del Usuario: Reducción de Movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Iconos SVG */
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* --- 3. CABECERA PRINCIPAL --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 246, 240, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 12px 24px;
+}
+
+.header-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+}
+
+.brand-icon-svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--frambuesa-viva);
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--cacao-deep);
+  letter-spacing: -0.02em;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--salvia-botanica);
+  letter-spacing: 0.04em;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 8px 6px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--frambuesa-viva);
+}
+
+.btn-whatsapp-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--frambuesa-viva);
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 12px 22px;
+  border-radius: var(--radius-full);
+  min-height: 48px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(184, 42, 74, 0.25);
+}
+
+.btn-whatsapp-header:hover {
+  background: var(--frambuesa-hover);
+  transform: translateY(-1px);
+}
+
+/* --- 4. MOMENTO FIRMA 1: HERO CON EL CORTE SENSORIAL --- */
+.sensory-hero-section {
+  padding: 56px 24px 72px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.sensory-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Escenario del Revelador Interactivo */
+.sensory-visual-stage {
+  position: relative;
+}
+
+.reveal-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(22, 16, 18, 0.12);
+  border: 1px solid var(--border-light);
+  background: #000;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.reveal-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Capa exterior con clip-path controlado por JS */
+.reveal-outside {
+  z-index: 2;
+  will-change: clip-path;
+}
+
+/* Píldoras de información de capas */
+.layer-tag-group {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.layer-tag-inside {
+  bottom: 20px;
+  right: 20px;
+  align-items: flex-end;
+}
+
+.layer-tag-outside {
+  top: 20px;
+  left: 20px;
+  align-items: flex-start;
+}
+
+.sensory-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--cacao-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.sensory-pill.dark {
+  background: rgba(22, 16, 18, 0.85);
+  color: #FFF;
+}
+
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--frambuesa-viva);
+}
+
+.pill-dot.gold {
+  background: var(--oro-miel);
+}
+
+/* Manija Divisora Arrastrable */
+.reveal-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  margin-left: -24px;
+  z-index: 10;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.handle-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #FFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.handle-knob {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--frambuesa-viva);
+  color: var(--frambuesa-viva);
+  transition: transform var(--transition-fast);
+}
+
+.reveal-handle:hover .handle-knob,
+.reveal-handle:focus-visible .handle-knob {
+  transform: scale(1.12);
+}
+
+.knob-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+}
+
+/* Controles Rápidos Accesibles */
+.reveal-quick-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-reveal-mode {
+  flex: 1;
+  min-height: 44px;
+  background: var(--crema-batida);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all var(--transition-fast);
+}
+
+.btn-reveal-mode:hover {
+  border-color: var(--frambuesa-viva);
+  color: var(--frambuesa-viva);
+}
+
+.btn-reveal-mode.active {
+  background: var(--cacao-deep);
+  border-color: var(--cacao-deep);
+  color: #FFF;
+}
+
+.reveal-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Columna de Contenido del Hero */
+.freshness-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--frambuesa-soft);
+  color: var(--frambuesa-viva);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--frambuesa-viva);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--cacao-deep);
+  margin-bottom: 18px;
+  letter-spacing: -0.025em;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Tarjeta Comercial Inmediata */
+.hero-pricing-card {
+  background: var(--crema-batida);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(22, 16, 18, 0.05);
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.pricing-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oro-miel);
+}
+
+.pricing-product-name {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cacao-deep);
+  margin-top: 2px;
+}
+
+.pricing-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-val {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--frambuesa-viva);
+  line-height: 1;
+}
+
+.price-curr {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.pricing-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.meta-val {
+  font-size: 0.9rem;
+  color: var(--cacao-deep);
+  font-weight: 700;
+}
+
+.pricing-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  text-decoration: none;
+}
+
+.btn-hero-order {
+  flex: 1.2;
+  background: var(--frambuesa-viva);
+  color: #FFF;
+  box-shadow: 0 4px 16px rgba(184, 42, 74, 0.28);
+}
+
+.btn-hero-order:hover {
+  background: var(--frambuesa-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(184, 42, 74, 0.35);
+}
+
+.btn-hero-explore {
+  flex: 1;
+  background: var(--mantequilla-base);
+  color: var(--cacao-deep);
+  border: 1px solid var(--border-light);
+}
+
+.btn-hero-explore:hover {
+  background: var(--crema-batida);
+  border-color: var(--cacao-deep);
+}
+
+.commercial-guarantee-note {
+  font-size: 0.8rem;
+  color: var(--salvia-botanica);
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+/* --- 5. MOMENTO FIRMA 2: VITRINA DE AUTOR Y SELECTOR REACTIVO --- */
+.vitrina-section {
+  padding: 80px 24px;
+  background: #FFF;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 52px;
+}
+
+.subheading-accent {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--frambuesa-viva);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--cacao-deep);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Cuadrícula de 4 Creaciones */
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+
+.creation-card {
+  background: var(--mantequilla-base);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(22, 16, 18, 0.04);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.creation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(22, 16, 18, 0.08);
+}
+
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-culinary);
+}
+
+.creation-card:hover .card-img {
+  transform: scale(1.04);
+}
+
+.batch-num-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(22, 16, 18, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #FFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--cacao-deep);
+}
+
+.card-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.card-price {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--frambuesa-viva);
+}
+
+.card-curr {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.card-recipe {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Selector Físico de Porciones */
+.portion-selector {
+  border: none;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.portion-legend {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.portion-options-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.portion-btn-label {
+  cursor: pointer;
+}
+
+.portion-btn-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.portion-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  background: var(--crema-batida);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cacao-deep);
+  transition: all var(--transition-fast);
+}
+
+.portion-btn-label:hover .portion-chip {
+  border-color: var(--frambuesa-viva);
+}
+
+.portion-btn-label input[type="radio"]:checked + .portion-chip {
+  background: var(--cacao-deep);
+  color: #FFF;
+  border-color: var(--cacao-deep);
+}
+
+.portion-btn-label input[type="radio"]:focus-visible + .portion-chip {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Tiras de Alérgenos */
+.allergen-strip {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.allergen-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(22, 16, 18, 0.05);
+  color: var(--text-secondary);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.allergen-pill.safe {
+  background: rgba(45, 61, 50, 0.1);
+  color: var(--salvia-botanica);
+  font-weight: 700;
+}
+
+/* Botón de Orden en Tarjeta */
+.btn-card-order {
+  width: 100%;
+  background: var(--cacao-deep);
+  color: #FFF;
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.btn-card-order:hover {
+  background: var(--frambuesa-viva);
+}
+
+/* --- 6. MOMENTO FIRMA 3: EL HORNO DE HOY & VERIFICADOR --- */
+.horno-section {
+  padding: 88px 24px;
+  background: var(--cacao-deep);
+  color: #FFF;
+}
+
+.horno-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.horno-philosophy .subheading-accent {
+  color: var(--oro-miel);
+}
+
+.horno-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: #FFF;
+  letter-spacing: -0.02em;
+}
+
+.horno-text {
+  font-size: 1.05rem;
+  color: #D6CBD0;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.horno-truth-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.horno-truth-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #E2D9DC;
+  line-height: 1.6;
+}
+
+.truth-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(197, 144, 43, 0.2);
+  border: 1px solid var(--oro-miel);
+  color: var(--oro-miel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Tarjeta del Verificador */
+.horno-checker-card {
+  background: var(--cacao-surface);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.checker-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 6px;
+}
+
+.checker-desc {
+  font-size: 0.9rem;
+  color: #BBAEB3;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 4px;
+}
+
+.label-req {
+  color: var(--frambuesa-viva);
+}
+
+.accessible-input,
+.accessible-select {
+  width: 100%;
+  min-height: 50px;
+  background: #2E2125;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-sm);
+  color: #FFF;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0 16px;
+  transition: border-color var(--transition-fast);
+}
+
+.accessible-input:focus,
+.accessible-select:focus {
+  border-color: var(--oro-miel);
+}
+
+.form-hint {
+  font-size: 0.75rem;
+  color: #A39398;
+  margin-top: 5px;
+}
+
+.btn-check-submit {
+  width: 100%;
+  background: var(--oro-miel);
+  color: var(--cacao-deep);
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.btn-check-submit:hover {
+  background: #DBA433;
+}
+
+/* Caja de Resultados */
+.checker-result-box {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.result-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45, 61, 50, 0.6);
+  border: 1px solid #4E6855;
+  color: #BDE4C6;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.result-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38D368;
+}
+
+.result-message {
+  font-size: 0.92rem;
+  color: #E2D9DC;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.btn-confirm-whatsapp {
+  width: 100%;
+  background: var(--frambuesa-viva);
+  color: #FFF;
+}
+
+.btn-confirm-whatsapp:hover {
+  background: var(--frambuesa-hover);
+}
+
+/* --- 7. TALLER, GARANTÍA & ALÉRGENOS --- */
+.taller-section {
+  padding: 88px 24px;
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 44px;
+}
+
+.commitment-card {
+  background: var(--crema-batida);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+}
+
+.commitment-num {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.commitment-title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cacao-deep);
+  margin-bottom: 10px;
+}
+
+.commitment-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.allergen-callout {
+  display: flex;
+  gap: 16px;
+  background: #F4EBE2;
+  border-left: 4px solid var(--oro-miel);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px;
+  color: var(--cacao-deep);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.allergen-callout-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* --- 8. PIE DE PÁGINA --- */
+.site-footer {
+  background: var(--cacao-deep);
+  color: #FFF;
+  padding: 64px 24px 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+.footer-brand-name {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFF;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #BFAEB3;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.footer-location {
+  font-size: 0.85rem;
+  color: var(--oro-miel);
+  font-weight: 600;
+}
+
+.footer-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FFF;
+  margin-bottom: 18px;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-list a {
+  font-size: 0.9rem;
+  color: #BFAEB3;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-list a:hover {
+  color: var(--frambuesa-viva);
+}
+
+.footer-hours {
+  font-size: 0.85rem;
+  color: #BFAEB3;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.btn-footer-whatsapp {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFF;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.btn-footer-whatsapp:hover {
+  background: var(--frambuesa-viva);
+  border-color: var(--frambuesa-viva);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.footer-bottom-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: #8C7C81;
+}
+
+.a11y-badge a {
+  color: #BFAEB3;
+  text-decoration: underline;
+}
+
+/* --- 9. RESPONSIVE ART DIRECTION --- */
+@media (max-width: 992px) {
+  .sensory-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+  }
+  .horno-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .commitments-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .main-nav {
+    display: none; /* Simplificado para móviles con botones claros de acción directa */
+  }
+}

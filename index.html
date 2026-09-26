@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulce Aura • Pastelería Casera de Autor | Cada Capa Revelada</title>
+  
+  <!-- Metadatos de Utilidad y Comercio -->
+  <meta name="description" content="Pastelería casera de autor horneada bajo pedido con mantequilla 100% pura, chocolate belga y frutos reales. Máximo 6 pasteles al día. Pide directo por WhatsApp." />
+  <meta name="keywords" content="pasteleria casera, pasteles de autor, bento cake, galette frutos rojos, pasteleria artesanal, pedidos whatsapp" />
+  <meta property="og:title" content="Dulce Aura • Pastelería Casera de Autor" />
+  <meta property="og:description" content="Descubre el interior de cada pastel: bizcocho húmedo, compota rústica y chocolate belga. Horneado hoy mismo." />
+  <meta property="og:image" content="assets/images/cake_cross_section.jpg" />
+
+  <!-- Favicon SVG Minimalista -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Tipografías: Fraunces (Culinaria con carácter horneado) + Plus Jakarta Sans (Comercial y accesible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Hoja de Estilos Principal -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ENLACE DE ACCESIBILIDAD PARA NAVEGACIÓN POR TECLADO (WCAG 2.2 AA) -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ANUNCIADOR DE ACCESIBILIDAD PARA LECTORES DE PANTALLA -->
+  <div id="liveAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- CABECERA PRINCIPAL: LIMPIA, ACCESIBLE Y DIRECTA -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#inicio" class="brand-logo" aria-label="Dulce Aura - Ir al inicio">
+        <svg class="brand-icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9a9 9 0 0 0-9-9zm0 2a7 7 0 0 1 7 7c0 1.8-.68 3.44-1.8 4.69l-10.89-10.89A6.95 6.95 0 0 1 12 5zm-5.2 3.79 10.89 10.89A6.96 6.96 0 0 1 12 21a7 7 0 0 1-7-7c0-1.8.68-3.44 1.8-4.69z"/>
+          <circle cx="12" cy="12" r="2.5"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Dulce Aura</span>
+          <span class="brand-sub">Taller Casero • Máx. 6 pasteles/día</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#corte-sensorial" class="nav-link">El Corte Sensorial</a></li>
+          <li><a href="#vitrina" class="nav-link">Vitrina de Autor</a></li>
+          <li><a href="#horno" class="nav-link">Agenda de Horno</a></li>
+          <li><a href="#taller" class="nav-link">Taller & Garantía</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura,%20quiero%20hacer%20un%20pedido%20de%20pastelería%20de%20autor" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp-header" 
+           aria-label="Contactar por WhatsApp para pedir pastel (Abre en nueva ventana)">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <span>Pedir por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- MOMENTO FIRMA 1: EL CORTE SENSORIAL (HERO DE APETITO INMEDIATO) -->
+    <section class="sensory-hero-section" id="corte-sensorial" aria-labelledby="hero-title">
+      <div class="sensory-hero-grid">
+        
+        <!-- COLUMNA VISUAL: REVELADOR INTERACTIVO DEL CORTE -->
+        <div class="sensory-visual-stage">
+          <div class="reveal-container" id="revealContainer" role="region" aria-label="Comparador visual del pastel: Cobertura exterior contra el corte con capas internas">
+            
+            <!-- Capa de Fondo: El Corte Interno (Textures, Bizcocho, Mousse, Frambuesas) -->
+            <div class="reveal-layer reveal-inside" aria-hidden="false">
+              <img src="assets/images/cake_cross_section.jpg" 
+                   alt="Corte transversal del Pastel Flora de Autor mostrando capas de bizcocho esponjoso, compota de frambuesa con semillas reales y mousse de chocolate belga" 
+                   class="reveal-img" />
+              <div class="layer-tag-group layer-tag-inside" aria-hidden="true">
+                <span class="sensory-pill"><span class="pill-dot"></span> Compota de Frambuesa Rústica</span>
+                <span class="sensory-pill"><span class="pill-dot"></span> Mousse Cacao Belga 70%</span>
+                <span class="sensory-pill"><span class="pill-dot"></span> Bizcocho Mantequilla 100%</span>
+              </div>
+            </div>
+
+            <!-- Capa Frontal: Vista Exterior Decorada -->
+            <div class="reveal-layer reveal-outside" id="revealOutsideLayer" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+              <img src="assets/images/hero_cake.jpg" 
+                   alt="Pastel Flora y Frambuesa completo decorado con crema sedosa y flores orgánicas frescas" 
+                   class="reveal-img" />
+              <div class="layer-tag-group layer-tag-outside" aria-hidden="true">
+                <span class="sensory-pill dark"><span class="pill-dot gold"></span> Decorado con Flores Orgánicas</span>
+              </div>
+            </div>
+
+            <!-- Manija / Separador Interactivo (Arrastrable y Accesible por Teclado) -->
+            <div class="reveal-handle" 
+                 id="revealHandle" 
+                 role="slider" 
+                 aria-label="Deslizar para revelar el interior del pastel" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100" 
+                 aria-valuenow="50" 
+                 tabindex="0" 
+                 style="left: 50%;">
+              <div class="handle-line"></div>
+              <div class="handle-knob" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="knob-icon"><path d="M8 12h8M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controles Rápidos de Vista Accesibles (Teclas o Clic) -->
+          <div class="reveal-quick-controls" role="group" aria-label="Alternar vista del pastel">
+            <button type="button" class="btn-reveal-mode" id="btnViewCut" aria-pressed="false" onclick="setRevealSplit(0)">
+              Ver Capas Internas
+            </button>
+            <button type="button" class="btn-reveal-mode active" id="btnViewSplit" aria-pressed="true" onclick="setRevealSplit(50)">
+              Comparar 50 / 50
+            </button>
+            <button type="button" class="btn-reveal-mode" id="btnViewFull" aria-pressed="false" onclick="setRevealSplit(100)">
+              Ver Exterior
+            </button>
+          </div>
+          <p class="reveal-hint" aria-hidden="true">
+            Arrastra el divisor o usa las teclas ← → para descubrir las capas internas.
+          </p>
+        </div>
+
+        <!-- COLUMNA INFORMATIVA Y DE COMPRA DIRECTA -->
+        <div class="sensory-content-col">
+          <div class="freshness-badge">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>Horneado hoy bajo pedido estricto</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            El verdadero sabor vive en las capas que no se ven por fuera.
+          </h1>
+
+          <p class="hero-description">
+            En <strong>Dulce Aura</strong> no usamos premezclas químicas ni rellenos industriales en polvo. Cada tarta se hornea con <strong>mantequilla pura de vaca</strong>, compota artesanal de frambuesas salvajes y chocolate belga al 70%, menos de 24 horas antes de llegar a tu mesa.
+          </p>
+
+          <!-- Tarjeta Comercial Inmediata del Pastel Insignia -->
+          <div class="hero-pricing-card">
+            <div class="pricing-header">
+              <div>
+                <span class="pricing-label">Pastel Insignia</span>
+                <h2 class="pricing-product-name">Flora & Frambuesa Silvestre</h2>
+              </div>
+              <div class="pricing-amount">
+                <span class="price-val" id="heroProductPrice">$520</span>
+                <span class="price-curr">MXN</span>
+              </div>
+            </div>
+
+            <div class="pricing-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Porciones</span>
+                <strong class="meta-val">6 a 8 personas</strong>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Frescura</span>
+                <strong class="meta-val">&lt; 24 hrs de horno</strong>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Alérgenos</span>
+                <span class="meta-val">Lácteos, Huevo, Trigo</span>
+              </div>
+            </div>
+
+            <div class="pricing-actions">
+              <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura!%20Quiero%20pedir%20el%20Pastel%20Flora%20y%20Frambuesa%20Silvestre%20(6-8%20porciones%20por%20$520%20MXN)." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-hero-order" 
+                 id="heroOrderBtn"
+                 aria-label="Pedir Pastel Flora y Frambuesa Silvestre por WhatsApp (Abre en nueva ventana)">
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                <span>Pedir este Pastel por WhatsApp</span>
+              </a>
+
+              <a href="#vitrina" class="btn btn-hero-explore">
+                <span>Ver las 4 Creaciones de Autor</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+              </a>
+            </div>
+
+            <p class="commercial-guarantee-note">
+              ✓ Entrega refrigerada en Tampico, Madero y Altamira o retiro en taller previa cita.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MOMENTO FIRMA 2: LA VITRINA DE AUTOR CON SELECTOR REACTIVO DE PORCIONES -->
+    <section class="vitrina-section" id="vitrina" aria-labelledby="vitrina-title">
+      <div class="section-container">
+        
+        <header class="section-intro">
+          <span class="subheading-accent">Colección de Horno</span>
+          <h2 class="section-title" id="vitrina-title">Nuestras 4 Creaciones de Autor</h2>
+          <p class="section-desc">
+            Cada receta fue perfeccionada en nuestro taller casero. Elige el tamaño que necesitas; el precio se ajusta de inmediato sin cargos ocultos.
+          </p>
+        </header>
+
+        <!-- Cuadrícula Curada de 4 Creaciones -->
+        <div class="creations-grid">
+
+          <!-- Creación 1: Pastel Flora & Frambuesa -->
+          <article class="creation-card" id="card-flora" data-name="Pastel Flora y Frambuesa">
+            <div class="card-img-wrap">
+              <img src="assets/images/hero_cake.jpg" alt="Pastel Flora y Frambuesa con flores comestibles" class="card-img" loading="lazy" />
+              <span class="batch-num-tag">Edición N° 01</span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Pastel Flora & Frambuesa</h3>
+                <div class="card-price-wrap" aria-live="polite">
+                  <span class="card-price" id="price-flora">$520</span>
+                  <span class="card-curr">MXN</span>
+                </div>
+              </div>
+
+              <p class="card-recipe">
+                Bizcocho tierno de vainilla de Papantla bañado en jarabe suave, compota de frambuesas silvestres y ganache de chocolate belga.
+              </p>
+
+              <!-- Selector Físico de Porciones -->
+              <fieldset class="portion-selector">
+                <legend class="portion-legend">Selecciona el tamaño:</legend>
+                <div class="portion-options-row">
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-flora" value="290" data-portions="Bento (1-2 pers)" data-card="flora" onchange="updateCardPortion('flora', 290, 'Bento (1-2 pers)')" />
+                    <span class="portion-chip">Bento (1-2p)</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-flora" value="520" data-portions="Íntimo (6-8 pers)" data-card="flora" checked onchange="updateCardPortion('flora', 520, 'Íntimo (6-8 pers)')" />
+                    <span class="portion-chip">Íntimo (6-8p)</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-flora" value="850" data-portions="Familiar (12-16 pers)" data-card="flora" onchange="updateCardPortion('flora', 850, 'Familiar (12-16 pers)')" />
+                    <span class="portion-chip">Familiar (12-16p)</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Alérgenos -->
+              <div class="allergen-strip" aria-label="Información de alérgenos">
+                <span class="allergen-pill">Lácteos</span>
+                <span class="allergen-pill">Huevo</span>
+                <span class="allergen-pill">Gluten</span>
+                <span class="allergen-pill safe">Sin Nueces</span>
+              </div>
+
+              <!-- Botón de Compra Directa -->
+              <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura!%20Quiero%20apartar%20el%20Pastel%20Flora%20y%20Frambuesa%20tamaño%20Íntimo%20(6-8%20pers)%20por%20$520%20MXN" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-card-order" 
+                 id="btn-order-flora"
+                 aria-label="Pedir Pastel Flora y Frambuesa por WhatsApp (Abre en nueva ventana)">
+                <span>Apartar este Pastel</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Creación 2: Galette Rústica de Frutos Silvestres -->
+          <article class="creation-card" id="card-galette" data-name="Galette Rústica de Frutos Silvestres">
+            <div class="card-img-wrap">
+              <img src="assets/images/berries_tart.jpg" alt="Galette rústica de frutos rojos con masa hojaldrada de mantequilla" class="card-img" loading="lazy" />
+              <span class="batch-num-tag">Edición N° 02</span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Galette Rústica Silvestre</h3>
+                <div class="card-price-wrap" aria-live="polite">
+                  <span class="card-price" id="price-galette">$480</span>
+                  <span class="card-curr">MXN</span>
+                </div>
+              </div>
+
+              <p class="card-recipe">
+                Costra quebrada artesanal con mantequilla de vaca, rellena de moras, frambuesas y grosellas frescas aromatizadas con ralladura de limón y tomillo.
+              </p>
+
+              <!-- Selector Físico de Porciones -->
+              <fieldset class="portion-selector">
+                <legend class="portion-legend">Selecciona el tamaño:</legend>
+                <div class="portion-options-row">
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-galette" value="480" data-portions="Mediana (6-8 pers)" data-card="galette" checked onchange="updateCardPortion('galette', 480, 'Mediana (6-8 pers)')" />
+                    <span class="portion-chip">Mediana (6-8p)</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-galette" value="760" data-portions="Grande (10-12 pers)" data-card="galette" onchange="updateCardPortion('galette', 760, 'Grande (10-12 pers)')" />
+                    <span class="portion-chip">Grande (10-12p)</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Alérgenos -->
+              <div class="allergen-strip" aria-label="Información de alérgenos">
+                <span class="allergen-pill">Lácteos</span>
+                <span class="allergen-pill">Gluten</span>
+                <span class="allergen-pill safe">Sin Huevo en relleno</span>
+              </div>
+
+              <!-- Botón de Compra Directa -->
+              <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura!%20Quiero%20apartar%20la%20Galette%20Rústica%20Silvestre%20tamaño%20Mediana%20(6-8%20pers)%20por%20$480%20MXN" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-card-order" 
+                 id="btn-order-galette"
+                 aria-label="Pedir Galette Rústica Silvestre por WhatsApp (Abre en nueva ventana)">
+                <span>Apartar esta Galette</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Creación 3: Royal Cupcakes de Autor -->
+          <article class="creation-card" id="card-cupcakes" data-name="Royal Cupcakes de Autor">
+            <div class="card-img-wrap">
+              <img src="assets/images/cupcakes_gourmet.jpg" alt="Caja de Royal Cupcakes decorados con crema batida y flores orgánicas" class="card-img" loading="lazy" />
+              <span class="batch-num-tag">Edición N° 03</span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Royal Cupcakes de Autor</h3>
+                <div class="card-price-wrap" aria-live="polite">
+                  <span class="card-price" id="price-cupcakes">$340</span>
+                  <span class="card-curr">MXN</span>
+                </div>
+              </div>
+
+              <p class="card-recipe">
+                Bizcochitos húmedos de cacao y vainilla con corazón de frutos rojos, coronados con buttercream sedoso y pétalos orgánicos comestibles.
+              </p>
+
+              <!-- Selector Físico de Porciones -->
+              <fieldset class="portion-selector">
+                <legend class="portion-legend">Selecciona la caja:</legend>
+                <div class="portion-options-row">
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-cupcakes" value="340" data-portions="Caja x4 piezas" data-card="cupcakes" checked onchange="updateCardPortion('cupcakes', 340, 'Caja x4 piezas')" />
+                    <span class="portion-chip">Caja x4 ($340)</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-cupcakes" value="480" data-portions="Caja x6 piezas" data-card="cupcakes" onchange="updateCardPortion('cupcakes', 480, 'Caja x6 piezas')" />
+                    <span class="portion-chip">Caja x6 ($480)</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-cupcakes" value="890" data-portions="Caja Regalo x12 piezas" data-card="cupcakes" onchange="updateCardPortion('cupcakes', 890, 'Caja Regalo x12 piezas')" />
+                    <span class="portion-chip">Caja x12 ($890)</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Alérgenos -->
+              <div class="allergen-strip" aria-label="Información de alérgenos">
+                <span class="allergen-pill">Lácteos</span>
+                <span class="allergen-pill">Huevo</span>
+                <span class="allergen-pill">Gluten</span>
+              </div>
+
+              <!-- Botón de Compra Directa -->
+              <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura!%20Quiero%20apartar%20los%20Royal%20Cupcakes%20en%20Caja%20x4%20piezas%20por%20$340%20MXN" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-card-order" 
+                 id="btn-order-cupcakes"
+                 aria-label="Pedir Royal Cupcakes por WhatsApp (Abre en nueva ventana)">
+                <span>Apartar esta Caja</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Creación 4: Bento Cake Minimalista -->
+          <article class="creation-card" id="card-bento" data-name="Bento Cake Minimalista">
+            <div class="card-img-wrap">
+              <img src="assets/images/bento_cake.jpg" alt="Bento cake minimalista coreano con diseño delicado y mensaje personalizado" class="card-img" loading="lazy" />
+              <span class="batch-num-tag">Edición N° 04</span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Bento Cake Personalizado</h3>
+                <div class="card-price-wrap" aria-live="polite">
+                  <span class="card-price" id="price-bento">$290</span>
+                  <span class="card-curr">MXN</span>
+                </div>
+              </div>
+
+              <p class="card-recipe">
+                Mini pastel íntimo (10 cm de diámetro) en cajita de bagazo de caña ecológica. Incluye dedicatoria caligráfica en crema a mano y velita artesanal.
+              </p>
+
+              <!-- Selector Físico de Porciones -->
+              <fieldset class="portion-selector">
+                <legend class="portion-legend">Sabor de bizcocho:</legend>
+                <div class="portion-options-row">
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-bento" value="290" data-portions="Vainilla Bourbon (1-2 pers)" data-card="bento" checked onchange="updateCardPortion('bento', 290, 'Vainilla Bourbon (1-2 pers)')" />
+                    <span class="portion-chip">Vainilla Bourbon</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-bento" value="310" data-portions="Chocolate Belga (1-2 pers)" data-card="bento" onchange="updateCardPortion('bento', 310, 'Chocolate Belga (1-2 pers)')" />
+                    <span class="portion-chip">Chocolate Belga</span>
+                  </label>
+                  <label class="portion-btn-label">
+                    <input type="radio" name="portion-bento" value="330" data-portions="Red Velvet Suave (1-2 pers)" data-card="bento" onchange="updateCardPortion('bento', 330, 'Red Velvet Suave (1-2 pers)')" />
+                    <span class="portion-chip">Red Velvet</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Alérgenos -->
+              <div class="allergen-strip" aria-label="Información de alérgenos">
+                <span class="allergen-pill">Lácteos</span>
+                <span class="allergen-pill">Huevo</span>
+                <span class="allergen-pill">Gluten</span>
+              </div>
+
+              <!-- Botón de Compra Directa -->
+              <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura!%20Quiero%20apartar%20el%20Bento%20Cake%20en%20Vainilla%20Bourbon%20por%20$290%20MXN" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-card-order" 
+                 id="btn-order-bento"
+                 aria-label="Pedir Bento Cake por WhatsApp (Abre en nueva ventana)">
+                <span>Apartar Bento Cake</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MOMENTO FIRMA 3: EL HORNO DE HOY & VERIFICADOR ACCESIBLE DE CUPOS -->
+    <section class="horno-section" id="horno" aria-labelledby="horno-title">
+      <div class="section-container">
+        
+        <div class="horno-grid">
+          
+          <div class="horno-philosophy">
+            <span class="subheading-accent">Capacidad Artesanal Honesta</span>
+            <h2 class="horno-title" id="horno-title">
+              Por qué nuestro límite son 6 pasteles diarios.
+            </h2>
+            <p class="horno-text">
+              Las pastelerías industriales hornean en serie y congelan bases durante semanas. Nosotros hacemos exactamente lo opuesto:
+            </p>
+            
+            <ul class="horno-truth-list">
+              <li>
+                <div class="truth-icon" aria-hidden="true">01</div>
+                <div>
+                  <strong>Mantequilla batida el mismo día:</strong> Jamás dejamos una masa reposando congelada. La textura aireada del bizcocho solo se logra cuando entra al horno de inmediato.
+                </div>
+              </li>
+              <li>
+                <div class="truth-icon" aria-hidden="true">02</div>
+                <div>
+                  <strong>Compotas sin conservadores químicos:</strong> Las frambuesas y frutos rojos se reducen a fuego lento con poco azúcar y se consumen frescas.
+                </div>
+              </li>
+              <li>
+                <div class="truth-icon" aria-hidden="true">03</div>
+                <div>
+                  <strong>Montaje exclusivo 24h antes:</strong> El ensamblado y decorado con flores orgánicas se realiza pocas horas antes de la entrega para que no absorba humedad.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Módulo Verificador Accesible de Cupos -->
+          <div class="horno-checker-card">
+            <div class="checker-card-header">
+              <h3 class="checker-title">Verifica el Cupo de tu Fecha</h3>
+              <p class="checker-desc">Selecciona el día de tu celebración para consultar disponibilidad en el horno.</p>
+            </div>
+
+            <form class="checker-accessible-form" onsubmit="handleAccessibleCheck(event)">
+              <div class="form-group">
+                <label for="eventDate" class="form-label">
+                  <span>Fecha de tu Evento:</span>
+                  <span class="label-req" aria-hidden="true">*</span>
+                </label>
+                <input type="date" 
+                       id="eventDate" 
+                       name="eventDate" 
+                       class="accessible-input" 
+                       required 
+                       aria-describedby="dateHelp" />
+                <span id="dateHelp" class="form-hint">Recomendamos apartar con mínimo 48 horas de anticipación.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="eventOccasion" class="form-label">
+                  <span>Tipo de Ocasión:</span>
+                </label>
+                <select id="eventOccasion" name="eventOccasion" class="accessible-select">
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Boda o Aniversario">Boda o Aniversario</option>
+                  <option value="Cena Íntima o Regalo">Cena Íntima o Regalo</option>
+                  <option value="Evento Corporativo">Evento Corporativo</option>
+                  <option value="Antojo Personal">Antojo Personal</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-check-submit" id="btnCheckSubmit">
+                <span>Consultar Disponibilidad</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+
+            <!-- Resultado Inmediato Accesible -->
+            <div id="checkerResult" class="checker-result-box" style="display: none;" aria-live="polite">
+              <div class="result-status-badge available" id="resultBadge">
+                <span class="result-dot" aria-hidden="true"></span>
+                <span id="resultBadgeText">Cupo Disponible en Horno</span>
+              </div>
+              <p class="result-message" id="resultMessageText">
+                Tenemos espacio para hornear tu pastel para esa fecha.
+              </p>
+              <a href="#" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-confirm-whatsapp" 
+                 id="resultWhatsappBtn"
+                 aria-label="Confirmar fecha en WhatsApp (Abre en nueva ventana)">
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                <span>Congelar Fecha por WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TRANSPARENCIA: TALLER, GARANTÍA & ALÉRGENOS -->
+    <section class="taller-section" id="taller" aria-labelledby="taller-title">
+      <div class="section-container">
+        
+        <header class="section-intro">
+          <span class="subheading-accent">Honestidad de Autor</span>
+          <h2 class="section-title" id="taller-title">Taller Casero & Compromiso de Entrega</h2>
+          <p class="section-desc">
+            Comprar un pastel artesanal no debe ser un volado. Establecemos compromisos claros y transparentes.
+          </p>
+        </header>
+
+        <div class="commitments-grid">
+          
+          <div class="commitment-card">
+            <div class="commitment-num" aria-hidden="true">❄️</div>
+            <h3 class="commitment-title">Envío Refrigerado Protegido</h3>
+            <p class="commitment-desc">
+              Cada pastel viaja con base antideslizante dentro de una caja reforzada en vehículo climatizado. Si sufre cualquier daño durante el trayecto, te devolvemos el 100% de tu dinero.
+            </p>
+          </div>
+
+          <div class="commitment-card">
+            <div class="commitment-num" aria-hidden="true">🧈</div>
+            <h3 class="commitment-title">Pureza de Ingredientes</h3>
+            <p class="commitment-desc">
+              Usamos únicamente mantequilla pura de vaca con 82% materia grasa, chocolate belga auténtico, huevos frescos de granja y flores orgánicas libres de pesticidas.
+            </p>
+          </div>
+
+          <div class="commitment-card">
+            <div class="commitment-num" aria-hidden="true">📍</div>
+            <h3 class="commitment-title">Ubicación & Retiro en Obrador</h3>
+            <p class="commitment-desc">
+              Obrador ubicado en Calle 0 #205 A, Col. Enrique Cárdenas González, 89309 Tampico, Tamps., México. Puedes retirar tu orden sin costo con cita programada o solicitar entrega a domicilio en Tampico, Cd. Madero y Altamira.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Alérgenos y Declaración Médica -->
+        <div class="allergen-callout" role="note">
+          <div class="allergen-callout-icon" aria-hidden="true">ℹ️</div>
+          <div class="allergen-callout-text">
+            <strong>Información para Personas con Alergias o Intolerancias:</strong>
+            <p>
+              Nuestro taller procesa <em>trigo (gluten), huevos, derivados lácteos y frutos secos (nueces, almendras)</em>. Aunque sanitizamos escrupulosamente entre cada tanda, <strong>no contamos con certificación libre de contaminación cruzada para celíacos severos</strong>. Tu salud y seguridad son primero.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA ACCESIBLE & CONTACTO COMERCIAL DIRECTO -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      
+      <div class="footer-brand-col">
+        <span class="footer-brand-name">Dalia Repostería</span>
+        <p class="footer-tagline">
+          Pastelería casera de autor horneada bajo pedido con ingredientes nobles, devoción y textura perfecta.
+        </p>
+        <p class="footer-location">
+          📍 Obrador: Calle 0 #205 A, Col. Enrique Cárdenas González, 89309 Tampico, Tamps., México.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Navegación</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#corte-sensorial">El Corte Sensorial</a></li>
+          <li><a href="#vitrina">Vitrina de Autor</a></li>
+          <li><a href="#horno">Agenda de Horno</a></li>
+          <li><a href="#taller">Compromiso & Alérgenos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4 class="footer-heading">Contacto Directo</h4>
+        <p class="footer-hours">
+          Lunes a Sábado: 9:00 - 19:00 hrs<br />
+          Entregas programadas con 48h de anticipación.
+        </p>
+        <a href="https://wa.me/5215512345678?text=Hola%20Dulce%20Aura,%20quisiera%20hacer%20una%20consulta%20sobre%20sus%20pasteles" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-footer-whatsapp" 
+           aria-label="Enviar mensaje a WhatsApp de Dulce Aura (Abre en nueva ventana)">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <span>WhatsApp Directo (+52 55 1234 5678)</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-inner">
+        <p>© 2026 Dulce Aura. Todos los derechos reservados.</p>
+        <p class="a11y-badge">
+          Cumple con estándares de accesibilidad <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG 2.2 Nivel AA</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts con Lógica Accesible, Reactiva y Sensorial -->
+  <script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+// Schema de Prisma para Dalia Repostería
+// Base de datos de alta integridad para repostería artesanal y comercio electrónico
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+  CUSTOMER
+}
+
+enum OrderStatus {
+  PENDIENTE
+  CONFIRMADO
+  EN_PREPARACION
+  LISTO_PARA_RECOGER
+  EN_CAMINO
+  ENTREGADO
+  CANCELADO
+}
+
+enum PaymentStatus {
+  PENDIENTE
+  PAGADO
+  FALLIDO
+  REEMBOLSADO
+}
+
+enum DeliveryMethod {
+  RECOGER_EN_TIENDA
+  DOMICILIO
+}
+
+enum CakeSize {
+  PERSONAS_6
+  PERSONAS_10
+  PERSONAS_15
+  PERSONAS_20
+  PERSONAS_30
+}
+
+enum CakeDecoration {
+  MINIMALISTA
+  FLORES
+  FRUTAS
+  CUMPLEANOS
+  TEMATICA
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         Role      @default(ADMIN)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Customer {
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  phone     String
+  addresses Address[]
+  orders    Order[]
+  reviews   Review[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Address {
+  id           String        @id @default(uuid())
+  customerId   String
+  customer     Customer      @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  street       String
+  exteriorNumber String
+  interiorNumber String?
+  colony       String
+  postalCode   String
+  city         String        @default("Ciudad de México")
+  reference    String?
+  deliveryZoneId String?
+  deliveryZone DeliveryZone? @relation(fields: [deliveryZoneId], references: [id])
+  orders       Order[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model DeliveryZone {
+  id             String    @id @default(uuid())
+  name           String    @unique // Ej: "Zona Centro", "Zona Poniente", "Zona Sur"
+  deliveryCost   Decimal   @db.Decimal(10, 2)
+  estimatedTime  String    // Ej: "45-60 min", "Mismo día (agendado)"
+  minOrderAmount Decimal   @default(0.00) @db.Decimal(10, 2)
+  active         Boolean   @default(true)
+  addresses      Address[]
+  orders         Order[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique // Pasteles, Cupcakes, Galletas, Brownies, Cheesecakes, Cajas, Personalizados
+  slug        String    @unique
+  description String?
+  displayOrder Int      @default(0)
+  products    Product[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Product {
+  id           String           @id @default(uuid())
+  name         String
+  slug         String           @unique
+  description  String
+  shortDesc    String?
+  price        Decimal          @db.Decimal(10, 2)
+  categorySlug String
+  category     Category         @relation(fields: [categorySlug], references: [slug])
+  imageUrl     String
+  secondaryImg String?
+  available    Boolean          @default(true)
+  isSeasonal   Boolean          @default(false)
+  isFeatured   Boolean          @default(false)
+  tastingNotes String?          // Ej: "Notas de frambuesa silvestre y vainilla de Papantla"
+  variants     ProductVariant[]
+  orderItems   OrderItem[]
+  reviews      Review[]
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+}
+
+model ProductVariant {
+  id          String      @id @default(uuid())
+  productId   String
+  product     Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name        String      // Ej: "Caja de 6 pzas", "Pastel 15 personas", "Chocolate Belga"
+  priceDelta  Decimal     @default(0.00) @db.Decimal(10, 2)
+  sku         String?     @unique
+  stock       Int         @default(10)
+  orderItems  OrderItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model CustomCake {
+  id               String         @id @default(uuid())
+  size             CakeSize
+  spongeFlavor     String         // Vainilla, Chocolate, Red velvet, Fresa, Limón
+  filling          String         // Fresa, Nutella, Crema de vainilla, Queso crema, Chocolate
+  frosting         String         // Buttercream, Chocolate, Crema
+  decoration       CakeDecoration // Minimalista, Flores, Frutas, Cumpleaños, Temática
+  customText       String?
+  eventDate        DateTime
+  quantity         Int            @default(1)
+  specialNotes     String?
+  referencePhotoUrl String?
+  calculatedPrice  Decimal        @db.Decimal(10, 2)
+  orderItem        OrderItem?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model Order {
+  id             String          @id @default(uuid())
+  orderNumber    String          @unique // Ej: "DALIA-2026-0042"
+  customerId     String?
+  customer       Customer?       @relation(fields: [customerId], references: [id])
+  customerName   String
+  customerEmail  String
+  customerPhone  String
+  deliveryMethod DeliveryMethod  @default(RECOGER_EN_TIENDA)
+  addressId      String?
+  address        Address?        @relation(fields: [addressId], references: [id])
+  deliveryAddressSummary String?
+  deliveryZoneId String?
+  deliveryZone   DeliveryZone?   @relation(fields: [deliveryZoneId], references: [id])
+  deliveryDate   DateTime
+  deliveryTimeSlot String        // Ej: "11:00 AM - 01:00 PM"
+  orderStatus    OrderStatus     @default(PENDIENTE)
+  paymentStatus  PaymentStatus   @default(PENDIENTE)
+  paymentMethod  String          @default("MERCADO_PAGO") // MERCADO_PAGO, STRIPE, EFECTIVO_CONTRA_ENTREGA
+  paymentTxId    String?         // ID de transacción de pasarela
+  subtotal       Decimal         @db.Decimal(10, 2)
+  deliveryFee    Decimal         @default(0.00) @db.Decimal(10, 2)
+  discountAmount Decimal         @default(0.00) @db.Decimal(10, 2)
+  total          Decimal         @db.Decimal(10, 2)
+  notes          String?
+  items          OrderItem[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model OrderItem {
+  id             String          @id @default(uuid())
+  orderId        String
+  order          Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId      String?
+  product        Product?        @relation(fields: [productId], references: [id])
+  variantId      String?
+  variant        ProductVariant? @relation(fields: [variantId], references: [id])
+  customCakeId   String?         @unique
+  customCake     CustomCake?     @relation(fields: [customCakeId], references: [id])
+  productName    String
+  unitPrice      Decimal         @db.Decimal(10, 2)
+  quantity       Int
+  totalPrice     Decimal         @db.Decimal(10, 2)
+  createdAt      DateTime        @default(now())
+}
+
+model Promotion {
+  id             String    @id @default(uuid())
+  code           String    @unique // Ej: "DULCEDALIA10"
+  description    String
+  discountPercentage Decimal? @db.Decimal(5, 2)
+  discountFixed  Decimal?  @db.Decimal(10, 2)
+  minSpend       Decimal   @default(0.00) @db.Decimal(10, 2)
+  active         Boolean   @default(true)
+  expiresAt      DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Review {
+  id          String    @id @default(uuid())
+  productId   String
+  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  customerId  String?
+  customer    Customer? @relation(fields: [customerId], references: [id])
+  authorName  String
+  rating      Int       @default(5)
+  comment     String
+  verified    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+}

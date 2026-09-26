@@ -1,0 +1,779 @@
+[
+  {
+    "id": "pastel-sublime-de-vainilla-y-frambuesa",
+    "slug": "pastel-sublime-de-vainilla-y-frambuesa",
+    "name": "Pastel Sublime de Vainilla y Frambuesa",
+    "category": "Pasteles",
+    "price": 680,
+    "shortDesc": "Bizcocho esponjoso banado con reduccion de frambuesas frescas y betun sedoso de mantequilla artesanal.",
+    "description": "Bizcocho esponjoso banado con reduccion de frambuesas frescas y betun sedoso de mantequilla artesanal.",
+    "tastingNotes": "",
+    "imageUrl": "/assets/productos_reales/mariposas_1.jpg",
+    "secondaryImg": "/assets/productos_reales/mariposas_1.jpg",
+    "images": [
+      "/uploads/dalia-1789611922392-photo-1578985545062-69928b1d95.webp",
+      "/assets/productos_reales/mariposas_1.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Piso Sencillo (15 personas)",
+        "priceDelta": 0
+      },
+      {
+        "name": "Doble Piso (25-30 personas)",
+        "priceDelta": 450
+      },
+      {
+        "name": "Tamaño Especial (20 personas)",
+        "priceDelta": 200
+      }
+    ],
+    "available": true,
+    "isFeatured": false
+  },
+  {
+    "id": "mario-galaxy",
+    "name": "Pastel Cósmico Super Mario Galaxy",
+    "category": "Personalizados",
+    "price": 750,
+    "shortDesc": "Galaxia en betún azul profundo, estrellas de poder y personajes de Mario Galaxy.",
+    "description": "Efecto galáctico en betún azul medianoche con estrellas comestibles, polvillo cósmico brillante, hongos de poder y estrellas Mario Galaxy.",
+    "tastingNotes": "Doble capa de relleno cremoso con chispas de chocolate y bizcocho húmedo.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "Piso Sencillo (15 personas)",
+        "priceDelta": 0
+      },
+      {
+        "name": "Doble Piso (25-30 personas)",
+        "priceDelta": 450
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/mario-galaxy_1.jpg",
+    "secondaryImg": "/assets/productos_reales/mario-galaxy_2.jpg",
+    "images": [
+      "/assets/productos_reales/mario-galaxy_1.jpg",
+      "/assets/productos_reales/mario-galaxy_2.jpg",
+      "/assets/productos_reales/mario-galaxy_3.jpg",
+      "/assets/productos_reales/mario-galaxy_4.jpg"
+    ],
+    "slug": "mario-galaxy",
+    "available": true
+  },
+  {
+    "id": "dragon-ball",
+    "name": "Pastel Temático Dragon Ball & Shenron",
+    "category": "Personalizados",
+    "price": 680,
+    "shortDesc": "Las 7 esferas del dragón ámbar, dragón Shenron y betún naranja vibrante.",
+    "description": "Pastel con betún naranja brillante y bordes trenzados en azul rey, con las 7 esferas del dragón de caramelo ámbar y el dragón Shenron.",
+    "tastingNotes": "Bizcocho de chocolate o vainilla con relleno de chocolate chantilly.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "15 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "25 personas",
+        "priceDelta": 280
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/dragon-ball_1.jpg",
+    "secondaryImg": "/assets/productos_reales/dragon-ball_2.jpg",
+    "images": [
+      "/assets/productos_reales/dragon-ball_1.jpg",
+      "/assets/productos_reales/dragon-ball_2.jpg"
+    ],
+    "slug": "dragon-ball",
+    "available": true
+  },
+  {
+    "id": "festejo-graduado",
+    "name": "Pastel Celebración & Graduación",
+    "category": "Personalizados",
+    "price": 690,
+    "shortDesc": "Diseño conmemorativo para festejo de grado, birrete y detalles festivos.",
+    "description": "Creación especial para felicitar a graduados con detalles temáticos, acabado profesional en betún fino y personalización con nombre.",
+    "tastingNotes": "Relleno especial de plátano con canela o crema pastelera.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 250
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/festejo-graduado_1.jpg",
+    "secondaryImg": "/assets/productos_reales/festejo-graduado_2.jpg",
+    "images": [
+      "/assets/productos_reales/festejo-graduado_1.jpg",
+      "/assets/productos_reales/festejo-graduado_2.jpg"
+    ],
+    "slug": "festejo-graduado",
+    "available": true
+  },
+  {
+    "id": "flores-cute",
+    "name": "Pastel Flores Cute & Espirales de Betún",
+    "category": "Pasteles",
+    "price": 520,
+    "shortDesc": "Espirales concéntricas de betún, florecitas azules y perlas de azúcar.",
+    "description": "Cobertura en espirales concéntricas de betún artesanal, con florecitas azules tipo no-me-olvides, chispas doradas y letrero acrílico de Feliz Cumpleaños.",
+    "tastingNotes": "Masa casera esponjosa con mermelada de fresa-piña o cajeta.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "Estándar (10 personas)",
+        "priceDelta": 0
+      },
+      {
+        "name": "Mediano (15 personas)",
+        "priceDelta": 200
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/flores-cute_1.jpg",
+    "secondaryImg": "/assets/productos_reales/flores-cute_2.jpg",
+    "images": [
+      "/assets/productos_reales/flores-cute_1.jpg",
+      "/assets/productos_reales/flores-cute_2.jpg",
+      "/assets/productos_reales/flores-cute_3.jpg"
+    ],
+    "slug": "flores-cute",
+    "available": true
+  },
+  {
+    "id": "gato-morado",
+    "name": "Pastel Gatito Kawaii Ruffle Lila",
+    "category": "Pasteles",
+    "price": 580,
+    "shortDesc": "Olanes en betún lila suave, gatito tierno asomándose y dedicatoria.",
+    "description": "Betún color lila con volantes y olanes en el borde, con un tierno gatito negro asomándose con ojos grandes y patitas rosas.",
+    "tastingNotes": "Bizcocho suave de vainilla con relleno de crema pastelera casera.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "Mini Bento (4-6 personas)",
+        "priceDelta": -160
+      },
+      {
+        "name": "Estándar (10-12 personas)",
+        "priceDelta": 0
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/gato-morado_1.jpg",
+    "secondaryImg": "/assets/productos_reales/gato-morado_2.jpg",
+    "images": [
+      "/assets/productos_reales/gato-morado_1.jpg",
+      "/assets/productos_reales/gato-morado_2.jpg"
+    ],
+    "slug": "gato-morado",
+    "available": true
+  },
+  {
+    "id": "its-a-girl",
+    "name": "Pastel Baby Shower \"It is a Girl\"",
+    "category": "Personalizados",
+    "price": 670,
+    "shortDesc": "Tonos pastel delicados para bienvenida de bebé, ositos y nubes de crema.",
+    "description": "Delicada creación para baby shower y revelación de género en tonos rosa suave, decorado con figuras tiernas y letrero conmemorativo.",
+    "tastingNotes": "Chantilly ligero con relleno de fresas frescas y crema.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "15 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "25 personas",
+        "priceDelta": 270
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/its-a-girl_1.jpg",
+    "secondaryImg": "/assets/productos_reales/its-a-girl_2.jpg",
+    "images": [
+      "/assets/productos_reales/its-a-girl_1.jpg",
+      "/assets/productos_reales/its-a-girl_2.jpg"
+    ],
+    "slug": "its-a-girl",
+    "available": true
+  },
+  {
+    "id": "hello-kitty",
+    "name": "Pastel Hello Kitty Rosa & Lazos",
+    "category": "Personalizados",
+    "price": 620,
+    "shortDesc": "Rosetas fucsia, Hello Kitty con osito, lazos y destellos dorados.",
+    "description": "Betún blanco con bordes de rosetas en fucsia intenso, destellos dorados, gemas de caramelo y figura de Hello Kitty con su osito.",
+    "tastingNotes": "El clásico infantil más pedido para cumpleaños mágicos.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "10 a 12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 260
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/hello-kitty_1.jpg",
+    "secondaryImg": "/assets/productos_reales/hello-kitty_2.jpg",
+    "images": [
+      "/assets/productos_reales/hello-kitty_1.jpg",
+      "/assets/productos_reales/hello-kitty_2.jpg"
+    ],
+    "slug": "hello-kitty",
+    "available": true
+  },
+  {
+    "id": "carmen-corona",
+    "name": "Pastel Corona Imperial & Rosetones",
+    "category": "Pasteles",
+    "price": 720,
+    "shortDesc": "Tiara brillante, betún rosa pastel, rosetones suaves y corazón dorado.",
+    "description": "Elaborado en betún rosa empolvado con textura horizontal, coronado con una tiara brillante, rosetones de crema y corazón de pan de oro.",
+    "tastingNotes": "El favorito para festejos de 15 años, 50 aniversarios y cumpleaños elegantes.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "Mediano (15-18 personas)",
+        "priceDelta": 0
+      },
+      {
+        "name": "Grande (25-30 personas)",
+        "priceDelta": 350
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/carmen-corona_1.jpg",
+    "secondaryImg": "/assets/productos_reales/carmen-corona_2.jpg",
+    "images": [
+      "/assets/productos_reales/carmen-corona_1.jpg",
+      "/assets/productos_reales/carmen-corona_2.jpg"
+    ],
+    "slug": "carmen-corona",
+    "available": true
+  },
+  {
+    "id": "mariposas",
+    "name": "Pastel Mariposas & Óleo Lavanda",
+    "category": "Pasteles",
+    "price": 650,
+    "shortDesc": "Pétalos al óleo espatulados, mariposas 3D y perlas de azúcar.",
+    "description": "Bizcocho esponjoso con pétalos artesanales espatulados en tonos rosa y lavanda, decorado con mariposas delicadas, perlas de azúcar y láminas doradas.",
+    "tastingNotes": "Suave chantilly artesanal, relleno a elegir (betún ligero de mantequilla dulce sin fondant).",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "Chico (10-12 porciones)",
+        "priceDelta": 0
+      },
+      {
+        "name": "Mediano (15-20 porciones)",
+        "priceDelta": 250
+      },
+      {
+        "name": "Grande (30 porciones)",
+        "priceDelta": 500
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/mariposas_1.jpg",
+    "secondaryImg": "/assets/productos_reales/mariposas_2.jpg",
+    "images": [
+      "/assets/productos_reales/mariposas_1.jpg",
+      "/assets/productos_reales/mariposas_2.jpg"
+    ],
+    "slug": "mariposas",
+    "available": true
+  },
+  {
+    "id": "cupcakes-minions",
+    "name": "Caja de Cupcakes Temáticos Minions",
+    "category": "Cupcakes",
+    "price": 360,
+    "shortDesc": "Cupcakes suaves decorados individualmente con personajes Minions y betún amarillo.",
+    "description": "Set de cupcakes de vainilla y chocolate cubiertos con betún de mantequilla y medallones de los Minions con detalles en azul y amarillo.",
+    "tastingNotes": "Masa esponjosa con centros cremosos de chocolate y vainilla.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "Caja de 6 piezas",
+        "priceDelta": 0
+      },
+      {
+        "name": "Caja de 12 piezas",
+        "priceDelta": 300
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/cupcakes-minions_1.jpg",
+    "secondaryImg": "/assets/productos_reales/cupcakes-minions_1.jpg",
+    "images": [
+      "/assets/productos_reales/cupcakes-minions_1.jpg"
+    ],
+    "slug": "cupcakes-minions",
+    "available": true
+  },
+  {
+    "id": "pikachu-mauricio",
+    "name": "Pastel Pokémon Pikachu Aventuras",
+    "category": "Personalizados",
+    "price": 660,
+    "shortDesc": "Decoración inspirada en Pikachu con chispas eléctricas y nombre personalizado.",
+    "description": "Diseño temático para fans de Pokémon con figura de Pikachu, nubes de merengue y dedicatoria personalizada.",
+    "tastingNotes": "Delicioso bizcocho con relleno de cajeta y nuez.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 260
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/pikachu-mauricio_1.jpg",
+    "secondaryImg": "/assets/productos_reales/pikachu-mauricio_1.jpg",
+    "images": [
+      "/assets/productos_reales/pikachu-mauricio_1.jpg"
+    ],
+    "slug": "pikachu-mauricio",
+    "available": true
+  },
+  {
+    "id": "sonic-rojo",
+    "name": "Pastel Sonic The Hedgehog & Chispas Rojas",
+    "category": "Personalizados",
+    "price": 650,
+    "shortDesc": "Betún rojo vibrante, Sonic en acción y estrellas de azúcar.",
+    "description": "Inspirado en el veloz erizo azul con contraste de betún rojo fuego, rosetones artesanales y detalles de videojuegos.",
+    "tastingNotes": "Relleno cremoso de chocolate chantilly.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 250
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/sonic-rojo_1.jpg",
+    "secondaryImg": "/assets/productos_reales/sonic-rojo_1.jpg",
+    "images": [
+      "/assets/productos_reales/sonic-rojo_1.jpg"
+    ],
+    "slug": "sonic-rojo",
+    "available": true
+  },
+  {
+    "id": "zootopia",
+    "name": "Pastel Aventura Zootopia Judy Hopps",
+    "category": "Personalizados",
+    "price": 640,
+    "shortDesc": "Personajes de Zootopia sobre césped de crema y flores de campo.",
+    "description": "Diseño infantil lleno de alegría con Judy y Nick de Zootopia, césped de betún verde y florecitas de colores.",
+    "tastingNotes": "Bizcocho suave de vainilla con mermelada artesanal de fresa.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 240
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/zootopia_1.jpg",
+    "secondaryImg": "/assets/productos_reales/zootopia_1.jpg",
+    "images": [
+      "/assets/productos_reales/zootopia_1.jpg"
+    ],
+    "slug": "zootopia",
+    "available": true
+  },
+  {
+    "id": "18-geraldine",
+    "name": "Pastel Elegancia 18 Años Geraldine",
+    "category": "Pasteles",
+    "price": 700,
+    "shortDesc": "Diseño sofisticado para mayoría de edad con flores de azúcar y número 18.",
+    "description": "Conmemoración inolvidable de 18 años con textura sedosa de betún, flores en degradé y letrero conmemorativo.",
+    "tastingNotes": "Relleno especial de zanahoria con nuez & piña o chocolate.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "15 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "25 personas",
+        "priceDelta": 300
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/18-geraldine_1.jpg",
+    "secondaryImg": "/assets/productos_reales/18-geraldine_1.jpg",
+    "images": [
+      "/assets/productos_reales/18-geraldine_1.jpg"
+    ],
+    "slug": "18-geraldine",
+    "available": true
+  },
+  {
+    "id": "cartoon-rosa",
+    "name": "Pastel Comic 2D Cartoon Cake",
+    "category": "Personalizados",
+    "price": 680,
+    "shortDesc": "Efecto dibujo animado 2D con líneas negras definidas y tono rosa pastel.",
+    "description": "Tendencia de pastel caricatura donde cada borde parece trazado con tinta dulce y suaves relieves fotogénicos.",
+    "tastingNotes": "Masa marmoleada con relleno de nutella casera.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 260
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/cartoon-rosa_1.jpg",
+    "secondaryImg": "/assets/productos_reales/cartoon-rosa_1.jpg",
+    "images": [
+      "/assets/productos_reales/cartoon-rosa_1.jpg"
+    ],
+    "slug": "cartoon-rosa",
+    "available": true
+  },
+  {
+    "id": "bts-beige",
+    "name": "Pastel K-Pop BTS Minimalista",
+    "category": "Personalizados",
+    "price": 650,
+    "shortDesc": "Diseño sobrio en tonos beige arena con logotipo de BTS y tipografía fina.",
+    "description": "Especial para fans del K-Pop con estética limpia, acabado liso tipo porcelana y detalles sobrios de la banda.",
+    "tastingNotes": "Bizcocho de vainilla y relleno de crema pastelera.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 250
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/bts-beige_1.jpg",
+    "secondaryImg": "/assets/productos_reales/bts-beige_1.jpg",
+    "images": [
+      "/assets/productos_reales/bts-beige_1.jpg"
+    ],
+    "slug": "bts-beige",
+    "available": true
+  },
+  {
+    "id": "scarface",
+    "name": "Pastel Noir Scarface The World is Yours",
+    "category": "Personalizados",
+    "price": 740,
+    "shortDesc": "Estilo dramático en negro mate con acentos dorados y concepto de cine.",
+    "description": "Para amantes de los clásicos cinematográficos: acabado en betún negro azabache, toques de oro y logotipo icónico.",
+    "tastingNotes": "Bizcocho de chocolate belga con ganache oscuro.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "15 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "25 personas",
+        "priceDelta": 300
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/scarface_1.jpg",
+    "secondaryImg": "/assets/productos_reales/scarface_1.jpg",
+    "images": [
+      "/assets/productos_reales/scarface_1.jpg"
+    ],
+    "slug": "scarface",
+    "available": true
+  },
+  {
+    "id": "vaquero",
+    "name": "Pastel Rústico Vaquero con Sombrero & Herradura",
+    "category": "Personalizados",
+    "price": 640,
+    "shortDesc": "Vetas de madera, arena de galleta triturada, sombrero y herradura.",
+    "description": "Acabado en betún tipo madera con vetas de caramelo, rosetones de chocolate, arena de galleta triturada, sombrero vaquero y herradura.",
+    "tastingNotes": "Bizcocho tradicional con relleno de cajeta y nuez picada.",
+    "isFeatured": true,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 260
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/vaquero_1.jpg",
+    "secondaryImg": "/assets/productos_reales/vaquero_1.jpg",
+    "images": [
+      "/assets/productos_reales/vaquero_1.jpg"
+    ],
+    "slug": "vaquero",
+    "available": true
+  },
+  {
+    "id": "negro-neto",
+    "name": "Pastel Rocker Black Neto",
+    "category": "Personalizados",
+    "price": 630,
+    "shortDesc": "Negro intenso con destellos plateados y dedicatoria personalizada.",
+    "description": "Audaz diseño en crema negra profunda con detalles brillantes y mensaje personalizado al centro.",
+    "tastingNotes": "Bizcocho esponjoso de chocolate con compota de fresa ácida.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 240
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/negro-neto_1.jpg",
+    "secondaryImg": "/assets/productos_reales/negro-neto_1.jpg",
+    "images": [
+      "/assets/productos_reales/negro-neto_1.jpg"
+    ],
+    "slug": "negro-neto",
+    "available": true
+  },
+  {
+    "id": "morado-sara",
+    "name": "Pastel Violeta & Flores Silvestres Sara",
+    "category": "Pasteles",
+    "price": 610,
+    "shortDesc": "Corona de flores silvestres sobre betún violeta empolvado.",
+    "description": "Diseño floral romántico en tono morado pastel con detalles de flores espatuladas y nombre en caligrafía fina.",
+    "tastingNotes": "Vainilla suave con crema de queso y zarzamoras.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 240
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/morado-sara_1.jpg",
+    "secondaryImg": "/assets/productos_reales/morado-sara_1.jpg",
+    "images": [
+      "/assets/productos_reales/morado-sara_1.jpg"
+    ],
+    "slug": "morado-sara",
+    "available": true
+  },
+  {
+    "id": "trabajador",
+    "name": "Pastel Homenaje al Trabajo & Dedicación",
+    "category": "Personalizados",
+    "price": 640,
+    "shortDesc": "Decoración conmemorativa para profesiones y oficios con herramientas artesanales.",
+    "description": "Homenaje dulce a trabajadores y profesionistas con detalles modelados y felicitación artesanal.",
+    "tastingNotes": "Masa tradicional con relleno de plátano con canela.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "12 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "20 personas",
+        "priceDelta": 250
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/trabajador_1.jpg",
+    "secondaryImg": "/assets/productos_reales/trabajador_1.jpg",
+    "images": [
+      "/assets/productos_reales/trabajador_1.jpg"
+    ],
+    "slug": "trabajador",
+    "available": true
+  },
+  {
+    "id": "verde-cumpleanos",
+    "name": "Pastel Safari Verde Esmeralda & Corona",
+    "category": "Pasteles",
+    "price": 590,
+    "shortDesc": "Betún verde fresco con textura rizada y detalles de fiesta infantil.",
+    "description": "Color verde vibrante con ribetes de manga pastelera, chispas doradas y mensaje de felicitación.",
+    "tastingNotes": "Bizcocho de vainilla con dulce de leche y nueces.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 220
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/verde-cumpleanos_1.jpg",
+    "secondaryImg": "/assets/productos_reales/verde-cumpleanos_1.jpg",
+    "images": [
+      "/assets/productos_reales/verde-cumpleanos_1.jpg"
+    ],
+    "slug": "verde-cumpleanos",
+    "available": true
+  },
+  {
+    "id": "rosa-cumpleanos",
+    "name": "Pastel Dalia Rosa Clásico & Perlitas",
+    "category": "Pasteles",
+    "price": 540,
+    "shortDesc": "Rosa empolvado con rosetones laterales y lluvia de perlas comestibles.",
+    "description": "El clásico que nunca falla: cobertura rosa pastel, bordes de olanes y perlas nacaradas sobre el bizcocho.",
+    "tastingNotes": "Bizcocho de vainilla con mermelada casera de fresa y piña.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 200
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/rosa-cumpleanos_1.jpg",
+    "secondaryImg": "/assets/productos_reales/rosa-cumpleanos_1.jpg",
+    "images": [
+      "/assets/productos_reales/rosa-cumpleanos_1.jpg"
+    ],
+    "slug": "rosa-cumpleanos",
+    "available": true
+  },
+  {
+    "id": "blanco-cumpleanos",
+    "name": "Pastel Nube Blanca Minimalista",
+    "category": "Pasteles",
+    "price": 510,
+    "shortDesc": "Betún blanco inmaculado, textura de espátula suave y letrero de felicitación.",
+    "description": "Elegancia minimalista con betún blanco sedoso, coronado con una vela o letrero acrílico sutil.",
+    "tastingNotes": "Bizcocho de vainilla o chocolate con crema chantilly ligera.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "16 personas",
+        "priceDelta": 180
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/blanco-cumpleanos_1.jpg",
+    "secondaryImg": "/assets/productos_reales/blanco-cumpleanos_1.jpg",
+    "images": [
+      "/assets/productos_reales/blanco-cumpleanos_1.jpg"
+    ],
+    "slug": "blanco-cumpleanos",
+    "available": true
+  },
+  {
+    "id": "cumpleanos-12-mas-1",
+    "name": "Pastel Celebración Divertida \"12+1\"",
+    "category": "Personalizados",
+    "price": 580,
+    "shortDesc": "Diseño simpático y juvenil con mensaje 12+1 y chispas festivas.",
+    "description": "Pastel divertido para adolescentes y cumpleaños con espíritu alegre y decoración colorida.",
+    "tastingNotes": "Marmoleado con relleno de chocolate cremoso.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 220
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/cumpleanos-12-mas-1_1.jpg",
+    "secondaryImg": "/assets/productos_reales/cumpleanos-12-mas-1_1.jpg",
+    "images": [
+      "/assets/productos_reales/cumpleanos-12-mas-1_1.jpg"
+    ],
+    "slug": "cumpleanos-12-mas-1",
+    "available": true
+  },
+  {
+    "id": "cumpleanos-chispas",
+    "name": "Pastel Confetti & Fiesta de Chispas",
+    "category": "Pasteles",
+    "price": 530,
+    "shortDesc": "Betún suave cubierto de chispas multicolor y rosetas esponjosas.",
+    "description": "Para celebrar con toda la alegría del mundo: cubierto de chispas de colores vibrantes y betún de vainilla.",
+    "tastingNotes": "Bizcocho confetti con relleno de crema pastelera casera.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "18 personas",
+        "priceDelta": 210
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/cumpleanos-chispas_1.jpg",
+    "secondaryImg": "/assets/productos_reales/cumpleanos-chispas_1.jpg",
+    "images": [
+      "/assets/productos_reales/cumpleanos-chispas_1.jpg"
+    ],
+    "slug": "cumpleanos-chispas",
+    "available": true
+  },
+  {
+    "id": "amarillo-mono",
+    "name": "Pastel Moño Amarillo Primavera",
+    "category": "Pasteles",
+    "price": 570,
+    "shortDesc": "Tono amarillo cálido con moño decorativo y detalles florales.",
+    "description": "Luminoso diseño en amarillo pastel con moño artesanal y ribetes decorativos de betún dulce.",
+    "tastingNotes": "Bizcocho de vainilla con mermelada de piña y coco.",
+    "isFeatured": false,
+    "variants": [
+      {
+        "name": "10 personas",
+        "priceDelta": 0
+      },
+      {
+        "name": "16 personas",
+        "priceDelta": 200
+      }
+    ],
+    "imageUrl": "/assets/productos_reales/amarillo-mono_1.jpg",
+    "secondaryImg": "/assets/productos_reales/amarillo-mono_1.jpg",
+    "images": [
+      "/assets/productos_reales/amarillo-mono_1.jpg"
+    ],
+    "slug": "amarillo-mono",
+    "available": true
+  }
+]

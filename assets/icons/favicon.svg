@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="pastelPinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEEF0"/>
+      <stop offset="100%" stop-color="#F39EA8"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9E8D2"/>
+      <stop offset="100%" stop-color="#D9A05B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle with Soft Blush & Border -->
+  <circle cx="32" cy="32" r="30" fill="url(#pastelPinkGrad)" stroke="#B84762" stroke-width="2" stroke-opacity="0.25"/>
+
+  <!-- Cake Base Plate -->
+  <path d="M16 48h32" stroke="#B84762" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M26 48v3h12v-3" fill="#B84762" opacity="0.4"/>
+
+  <!-- Bottom Tier -->
+  <rect x="20" y="36" width="24" height="12" rx="3" fill="#FFFDF9" stroke="#B84762" stroke-width="2"/>
+  <!-- Bottom Tier Frosting Swirls -->
+  <path d="M20 39c2 2 4 2 6 0s4-2 6 0 4 2 6 0 4-2 6 0" fill="none" stroke="#F39EA8" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Top Tier -->
+  <rect x="24" y="24" width="16" height="12" rx="2.5" fill="#FFFDF9" stroke="#B84762" stroke-width="2"/>
+  <!-- Top Tier Frosting Swirls -->
+  <path d="M24 27c1.5 1.5 3 1.5 4.5 0s3-1.5 4.5 0 3 1.5 4 0" fill="none" stroke="#F39EA8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Cute Cherry / Strawberry on Top -->
+  <circle cx="32" cy="19" r="3.5" fill="#E57386"/>
+  <path d="M32 16c1-3 4-5 6-4" fill="none" stroke="#605053" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Sparkling Stars Cute Accent -->
+  <path d="M47 18l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z" fill="#D9A05B"/>
+  <path d="M15 28l0.8 1.8 1.8 0.8-1.8 0.8-0.8 1.8-0.8-1.8-1.8-0.8 1.8-0.8z" fill="#D9A05B"/>
+</svg>

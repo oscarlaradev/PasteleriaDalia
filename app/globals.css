@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-vanilla: #FAF6F0;
+  --color-cream: #FFFDF9;
+  --color-blush: #F4E5E7;
+  --color-rose: #E8B6BF;
+  --color-strawberry: #D4687C;
+  --color-chocolate: #2A1719;
+  --color-cocoa: #42272A;
+  --color-cherry: #B51B32;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-script: 'Ephesis', cursive;
+}
+
+/* Base resets & typography */
+html {
+  background-color: var(--color-vanilla);
+  color: var(--color-chocolate);
+  font-family: var(--font-sans);
+  scroll-behavior: auto; /* Controlado suavemente por Lenis */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--color-vanilla);
+  color: var(--color-chocolate);
+}
+
+/* Selección de texto personalizada con el rosa fresa y crema de Dalia */
+::selection {
+  background-color: var(--color-blush);
+  color: var(--color-chocolate);
+}
+
+/* Accesibilidad WCAG 2.2: Anillos de enfoque notorios pero elegantes */
+:focus-visible {
+  outline: 2.5px solid var(--color-strawberry);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Textura sutil de papel artesanal */
+.paper-texture {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#E8B6BF 0.5px, transparent 0.5px), radial-gradient(#E8B6BF 0.5px, #FFFDF9 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-opacity: 0.15;
+}
+
+/* Borde recortado sutil estilo scrapbook */
+.scallop-border {
+  border: 1px dashed rgba(66, 39, 42, 0.2);
+}
+
+/* Lenis Smooth Scroll Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Respeto estricto a personas con sensibilidad de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
