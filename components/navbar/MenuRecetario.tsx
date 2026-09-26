@@ -14,7 +14,7 @@ interface MenuRecetarioProps {
 const secciones = [
   { name: 'Nuestros Antojos (Tienda)', href: '/tienda', note: 'Pasteles, galletas y bocados' },
   { name: 'Tu Pastel, a tu manera', href: '/pastel-personalizado', note: 'Elige bizcocho, relleno y diseño' },
-  { name: 'Así lo Hacemos', href: '/#como-lo-hacemos', note: 'El secreto artesanal de nuestro obrador' },
+  { name: 'Así lo Hacemos', href: '/#como-lo-hacemos', note: 'El secreto artesanal de nuestra pastelería' },
   { name: 'Cajas & Regalos', href: '/tienda?categoria=cajas', note: 'Con lazo de tela y tarjeta escrita' },
   { name: 'Ven a Visitarnos', href: '/#ubicacion', note: 'Calle 0 #205 A, Col. Enrique Cárdenas, Tampico' },
 ];
@@ -57,7 +57,7 @@ export function MenuRecetario({ isOpen, onClose, cartCount, onOpenCart }: MenuRe
           </div>
 
           <p className="text-xs uppercase tracking-widest text-dalia-cocoa/60 font-semibold mb-6">
-            Páginas del taller:
+            Explora nuestro menú:
           </p>
 
           {/* Enlaces Escalonados Estilo Recetario */}

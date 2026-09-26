@@ -18,7 +18,7 @@ function getClientIp(req: NextRequest): string {
 
 // 1. Validar si la sesión actual es válida
 export async function GET(req: NextRequest) {
-  const sessionCookie = req.cookies.get('dalia_obrador_session')?.value;
+  const sessionCookie = req.cookies.get('dalia_admin_session')?.value;
 
   if (sessionCookie && verifyAdminSessionToken(sessionCookie)) {
     return NextResponse.json({ authenticated: true });
@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
     const pin = (body.pin || '').trim();
 
     if (!pin) {
-      return NextResponse.json({ error: 'Ingrese la Clave Maestra del Obrador.' }, { status: 400 });
+      return NextResponse.json({ error: 'Ingrese la Clave Maestra de Acceso.' }, { status: 400 });
     }
 
     // Comprobación de la clave
@@ -61,11 +61,11 @@ export async function POST(req: NextRequest) {
 
       const res = NextResponse.json({
         success: true,
-        message: 'Acceso concedido al panel del Obrador Dalia.',
+        message: 'Acceso concedido al panel de administración Dalia.',
       });
 
       // Cookie de sesión ultra-segura HttpOnly
-      res.cookies.set('dalia_obrador_session', token, {
+      res.cookies.set('dalia_admin_session', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
 // 3. Cierre de sesión seguro
 export async function DELETE() {
   const res = NextResponse.json({ success: true, message: 'Sesión cerrada exitosamente.' });
-  res.cookies.set('dalia_obrador_session', '', {
+  res.cookies.set('dalia_admin_session', '', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',

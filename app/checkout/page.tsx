@@ -94,7 +94,7 @@ export default function CheckoutPage() {
           <p><strong>Cliente:</strong> {formData.name}</p>
           <p><strong>Correo:</strong> {formData.email}</p>
           <p><strong>Teléfono:</strong> {formData.phone}</p>
-          <p><strong>Método de Entrega:</strong> {deliveryMethod === 'DOMICILIO' ? `A domicilio (${activeZone?.name})` : 'Recoger en obrador (Calle 0 #205 A, Col. Enrique Cárdenas González, Tampico)'}</p>
+          <p><strong>Método de Entrega:</strong> {deliveryMethod === 'DOMICILIO' ? `A domicilio (${activeZone?.name})` : 'Recoger en pastelería (Calle 0 #205 A, Col. Enrique Cárdenas González, Tampico)'}</p>
           <p><strong>Fecha Programada:</strong> {formData.deliveryDate} ({formData.deliveryTimeSlot})</p>
           <p><strong>Total:</strong> {formatCurrency(total)}</p>
         </div>
@@ -190,7 +190,7 @@ export default function CheckoutPage() {
                 >
                   <Store className="w-5 h-5 text-dalia-strawberry" />
                   <div>
-                    <span className="block text-xs font-bold text-dalia-chocolate">Recoger en Obrador</span>
+                    <span className="block text-xs font-bold text-dalia-chocolate">Recoger en Pastelería</span>
                     <span className="block text-[10px] text-dalia-cocoa/70">Calle 0 #205 A, Tampico</span>
                   </div>
                 </button>

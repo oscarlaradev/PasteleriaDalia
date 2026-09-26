@@ -21,7 +21,7 @@ export function UbicacionSeccion() {
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-dalia-blush rounded-full text-xs font-semibold text-dalia-strawberry uppercase tracking-wider">
               <span>📍</span>
-              <span>Nuestro Obrador</span>
+              <span>Nuestra Ubicación</span>
             </div>
 
             <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight">
@@ -29,7 +29,7 @@ export function UbicacionSeccion() {
             </h2>
 
             <p className="text-dalia-cocoa/80 text-sm md:text-base font-light leading-relaxed">
-              El aroma a mantequilla y café fresco te recibirá al entrar. Ven por una rebanada o a recoger tus pedidos especiales agendados en nuestro taller de horneado.
+              El aroma a mantequilla y café fresco te recibirá al entrar. Ven por una rebanada o a recoger tus pedidos especiales agendados en nuestra pastelería.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -37,7 +37,7 @@ export function UbicacionSeccion() {
                 <MapPin className="w-5 h-5 text-dalia-strawberry flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-dalia-chocolate block">
-                    Dirección del Obrador
+                    Dirección
                   </span>
                   <p className="text-sm font-medium text-dalia-chocolate">
                     Calle 0 #205 A, Col. Enrique Cárdenas González
@@ -65,7 +65,7 @@ export function UbicacionSeccion() {
                 <Phone className="w-5 h-5 text-dalia-strawberry flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-dalia-chocolate block">
-                    Teléfono & WhatsApp del Obrador
+                    Teléfono & WhatsApp
                   </span>
                   <p className="text-xs text-dalia-cocoa">+52 (833) 318-6010</p>
                 </div>
@@ -89,7 +89,7 @@ export function UbicacionSeccion() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-dalia-blush hover:bg-dalia-rose/50 text-dalia-chocolate text-xs font-semibold rounded-full uppercase tracking-wider transition-colors border border-dalia-rose/40"
               >
-                <span>Vista 360° del Obrador</span>
+                <span>Vista 360° de la Pastelería</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 

@@ -131,7 +131,7 @@ export function CustomCakeBuilder({ onAddToCart }: CustomCakeBuilderProps) {
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-dalia-blush rounded-full text-xs font-semibold text-dalia-strawberry uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Taller a Medida</span>
+            <span>Diseño a tu Medida</span>
           </div>
           <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight">
             Tu pastel, a tu <span className="italic font-normal text-dalia-strawberry">manera</span>

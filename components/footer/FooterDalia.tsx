@@ -24,14 +24,14 @@ export function FooterDalia() {
               &ldquo;hecho para celebrar los momentos bonitos.&rdquo;
             </p>
             <p className="text-xs text-dalia-cream/70 font-light max-w-sm leading-relaxed">
-              Taller de repostería artesanal en Tampico, Tamaulipas. Bizcochos aireados, compotas caseras de fruta de temporada y pasteles con alma.
+              Pastelería y repostería artesanal en Tampico, Tamaulipas. Bizcochos aireados, compotas caseras de fruta de temporada y pasteles con alma.
             </p>
           </div>
 
           {/* Enlaces y Navegación Rápida */}
           <div className="md:col-span-3 space-y-3">
             <span className="text-xs uppercase font-bold tracking-widest text-dalia-rose block">
-              Explorar el Taller
+              Menú & Navegación
             </span>
             <ul className="space-y-2 text-xs font-light text-dalia-cream/80">
               <li>
@@ -75,7 +75,7 @@ export function FooterDalia() {
               </a>
             </div>
             <p className="text-xs text-dalia-cream/70 leading-relaxed">
-              <strong>Obrador:</strong>{' '}
+              <strong>Ubicación:</strong>{' '}
               <a
                 href="https://maps.app.goo.gl/CYCMEUSUKLMjEZDN8"
                 target="_blank"

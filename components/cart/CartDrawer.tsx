@@ -182,7 +182,7 @@ export function CartDrawer({
             </Link>
 
             <p className="text-[10px] text-center text-dalia-cocoa/60">
-              Entrega programada y retiro en obrador disponibles en el checkout.
+              Entrega a domicilio y retiro en tienda disponibles en el checkout.
             </p>
           </div>
         )}

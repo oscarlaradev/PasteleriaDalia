@@ -58,7 +58,7 @@ export default function TiendaPage() {
                 Nuestros <span className="italic font-normal text-dalia-rose">pasteles</span> y antojos
               </h1>
               <p className="text-white/90 text-xs md:text-sm font-light leading-relaxed">
-                Cada creación es horneada y decorada con betún artesanal en nuestro taller en Tampico. Explora los detalles y distintas vistas de cada diseño deslizando las imágenes.
+                Cada creación es horneada y decorada con betún artesanal en nuestra pastelería en Tampico. Explora los detalles y distintas vistas de cada diseño deslizando las imágenes.
               </p>
             </div>
           </div>

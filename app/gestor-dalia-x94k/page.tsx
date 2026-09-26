@@ -58,7 +58,7 @@ const initialOrders: MockOrder[] = [
     orderNumber: 'DALIA-2026-0042',
     customerName: 'Valeria Montes',
     customerPhone: '833 491 3341',
-    deliveryMethod: 'Recoger en Obrador (Calle 0 #205 A, Col. Enrique Cárdenas)',
+    deliveryMethod: 'Recoger en Pastelería (Calle 0 #205 A, Col. Enrique Cárdenas)',
     deliveryDate: '2026-09-18 (11:00 AM)',
     total: 950,
     status: 'EN_PREPARACION',
@@ -80,7 +80,7 @@ const initialOrders: MockOrder[] = [
     orderNumber: 'DALIA-2026-0044',
     customerName: 'Camila Villalobos',
     customerPhone: '833 882 1190',
-    deliveryMethod: 'Recoger en Obrador',
+    deliveryMethod: 'Recoger en Pastelería',
     deliveryDate: '2026-09-19 (01:00 PM)',
     total: 1200,
     status: 'PENDIENTE',
@@ -638,7 +638,7 @@ export default function SecretAdminPortal() {
               <Lock className="w-6 h-6" />
             </div>
             <span className="text-[10px] font-mono tracking-widest text-dalia-rose uppercase px-3 py-1 bg-dalia-rose/10 rounded-full border border-dalia-rose/20">
-              Terminal del Obrador · Acceso Restringido
+              Terminal Administrativa · Acceso Restringido
             </span>
             <h1 className="font-serif text-2xl font-bold text-white tracking-wide">
               Dalia Repostería
@@ -724,7 +724,7 @@ export default function SecretAdminPortal() {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="font-serif font-bold text-lg text-white tracking-wide">
-                  Panel Maestro del Obrador
+                  Panel Maestro Dalia Repostería
                 </h1>
                 <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold uppercase px-2 py-0.5 rounded-full flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -745,7 +745,7 @@ export default function SecretAdminPortal() {
               className="px-3.5 py-2 bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-[#25D366] text-xs font-semibold rounded-lg flex items-center gap-2 transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Obrador ({siteContent.contact.phone})</span>
+              <span>WhatsApp de Atención ({siteContent.contact.phone})</span>
             </a>
 
             <button
@@ -805,7 +805,7 @@ export default function SecretAdminPortal() {
             }`}
           >
             <ShoppingBag className="w-4 h-4" />
-            <span>Pedidos en Obrador ({orders.length})</span>
+            <span>Pedidos Recibidos ({orders.length})</span>
           </button>
 
           <button
@@ -1021,7 +1021,7 @@ export default function SecretAdminPortal() {
             <div className="bg-[#241C1E] border border-white/10 rounded-2xl p-6 space-y-6">
               <div>
                 <h2 className="font-serif font-bold text-lg text-white">
-                  Control de Frases, Textos & Datos del Obrador
+                  Control de Frases, Textos & Datos de Contacto
                 </h2>
                 <p className="text-xs text-white/50">
                   Modifica las frases principales del sitio, sellos de calidad y datos de contacto de Tampico.
@@ -1135,10 +1135,10 @@ export default function SecretAdminPortal() {
                   </div>
                 </div>
 
-                {/* Datos de Contacto y Obrador */}
+                {/* Datos de Contacto y Ubicación */}
                 <div className="space-y-4 pt-4 border-t border-white/10">
                   <span className="text-xs font-bold uppercase tracking-widest text-dalia-rose block">
-                    3. Datos Oficiales del Obrador en Tampico
+                    3. Datos Oficiales de Ubicación y Contacto
                   </span>
 
                   <div className="space-y-1.5">
@@ -1190,7 +1190,7 @@ export default function SecretAdminPortal() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs text-white/70 block">Horario de Obrador</label>
+                    <label className="text-xs text-white/70 block">Horario de Atención</label>
                     <input
                       type="text"
                       value={siteContent.contact.hours}
@@ -1444,7 +1444,7 @@ export default function SecretAdminPortal() {
                   Pedidos y Encargos Recibidos
                 </h2>
                 <p className="text-xs text-white/50">
-                  Control de entregas en obrador y envíos en Tampico.
+                  Control de pedidos para recoger y envíos en Tampico.
                 </p>
               </div>
             </div>
@@ -1497,7 +1497,7 @@ export default function SecretAdminPortal() {
                 Disponibilidad de Horneado en Tampico
               </h2>
               <p className="text-xs text-white/50">
-                Horario de atención del taller: {siteContent.contact.hours}
+                Horario de atención: {siteContent.contact.hours}
               </p>
               <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-xs text-emerald-300">
                 Capacidad de pedidos de fin de semana activa. Los clientes pueden solicitar cotización directa por WhatsApp.

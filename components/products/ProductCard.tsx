@@ -43,7 +43,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
       `📏 Tamaño / Porción: ${selectedVariant || 'Estándar'}\n` +
       `💰 Precio: ${formatCurrency(officialPrice)}\n` +
       (product.tastingNotes ? `✨ Detalle: ${product.tastingNotes}\n` : '') +
-      `\n¿Tienen disponibilidad en agenda para entrega o retiro en su obrador de Tampico? ¡Muchas gracias!`
+      `\n¿Tienen disponibilidad en agenda para entrega a domicilio o recoger en Tampico? ¡Muchas gracias!`
     );
     window.open(`https://wa.me/528333186010?text=${text}`, '_blank');
   };

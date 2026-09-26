@@ -23,7 +23,7 @@ export default function PastelPersonalizadoPage() {
           </div>
           <div className="flex items-center gap-2">
             <Heart className="w-4 h-4 text-dalia-strawberry" />
-            <span>Decorado a mano en nuestro taller</span>
+            <span>Decorado artesanalmente a mano</span>
           </div>
         </div>
       </div>

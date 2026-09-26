@@ -25,13 +25,13 @@ const pasos: Step[] = [
     tag: '02. LA ALQUIMIA',
     title: 'MEZCLA PACIENTE',
     description: 'Emulsionamos los huevos de libre pastoreo con azúcar de caña hasta alcanzar el punto de listón. Cada batido busca atrapar aire natural.',
-    detail: 'Textura sedosa, sin prisa, respetando la temperatura ambiente del obrador.',
+    detail: 'Textura sedosa, sin prisa, respetando la temperatura ideal de cada ingrediente.',
     badge: 'Aireado natural',
   },
   {
     tag: '03. EL CALOR',
     title: 'HORNO DORADO',
-    description: 'Horneamos a fuego bajo y constante. El olor a caramelo tostado y bizcocho recién subido inunda toda la calle de la Roma Norte.',
+    description: 'Horneamos a fuego bajo y constante. El olor a caramelo tostado y bizcocho recién subido inunda toda nuestra cocina.',
     detail: '160°C de calor suave para preservar la humedad del corazón del pastel.',
     badge: 'Horneado cada mañana',
   },
@@ -104,7 +104,7 @@ export function RecetaVisual() {
         <div className="lg:col-span-5 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-dalia-blush rounded-full text-xs font-semibold tracking-wider text-dalia-strawberry uppercase">
             <span>✦</span>
-            <span>El Secreto del Obrador</span>
+            <span>El Secreto Artesanal</span>
           </div>
 
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-dalia-chocolate leading-tight">
